@@ -1,16 +1,22 @@
-# login_signup
+# login_signup With Firebase
 
-A new Flutter project.
+## Step 1: Set Up Firebase Project
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new Firebase project or select an existing one.
+3. Add an Android and/or iOS app to the Firebase project.
 
-## Getting Started
+## Step 2: Enable GitHub Authentication
+1. In the Firebase Console, navigate to **Authentication** > **Sign-in method**.
+2. Enable GitHub as a sign-in provider.
+3. Provide the **Client ID** and **Client Secret** from your GitHub OAuth App.
+   - Create a new OAuth App on GitHub by going to **Settings** > **Developer settings** > **OAuth Apps** > **New OAuth App**.
+   - Set the **Authorization callback URL** to `https://<your-project-id>.firebaseapp.com/__/auth/handler`.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Step 3: Add Firebase and Authentication Packages to Your Flutter Project
+Add the following dependencies to your `pubspec.yaml` file:
+```yaml
+dependencies:
+  firebase_core: latest_version
+  firebase_auth: latest_version
+  flutter_web_plugins: latest_version
+  http: latest_version
