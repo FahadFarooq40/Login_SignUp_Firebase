@@ -10,7 +10,6 @@
 2. Enable GitHub as a sign-in provider.
 3. Provide the **Client ID** and **Client Secret** from your GitHub OAuth App.
    - Create a new OAuth App on GitHub by going to **Settings** > **Developer settings** > **OAuth Apps** > **New OAuth App**.
-   - Set the **Authorization callback URL** to `https://<your-project-id>.firebaseapp.com/__/auth/handler`.
 
 ## Step 3: Add Firebase and Authentication Packages to Your Flutter Project
 Add the following dependencies to your `pubspec.yaml` file:
